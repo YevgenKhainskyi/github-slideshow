@@ -1,13 +1,153 @@
----
-layout: presentation
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My resume</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">        
+</head>
+<body>
+    <!---Main container-->
+    <div class="wrapper">
+        <aside class="sidebar">
+            <img class="myPhoto" src="./img/photo.jpg" alt="My photo">
+            <!--Contacts-->
+            <div class="Contacts">
+                <h3 class="ContactsTitle">Contacts</h3>
+                <div>
+                   <span class="ContactABB"> C: </span> 
+                   <a class="ContactLinks" href="tel:+380633230960">+38 063 323 09 60</a>
+                </div>
+                <div>
+                   <span class="ContactABB"> E: </span> 
+                   <a class="ContactLinks" href="mailto:Example@gmail.com">  Example@gmail.com</a> </p>
+                </div>
+            </div>
+            <!--Tech Skills container-->
+            <div class="TechSkills">
+                <h3 class="TechSkillsTitle">Tech Skills</h3>
+                <ul>
+                     <li class="ElementTechSkill">
+                         <span class="ElementTechSkillText">HTML5</span>
+                    </li>
+                     <li class="ElementTechSkill">
+                         <span class="ElementTechSkillText">CSS3</span>
+                    </li>
+                     <li class="ElementTechSkill">
+                         <span class="ElementTechSkillText">Basic knowledge API</span>
+                    </li>
+                    <!--<li class="ElementTechSkill">
+                         <span class="ElementTechSkillText"></span>
+                    </li>--->
+                     <li class="ElementTechSkill">
+                         <span class="ElementTechSkillText">Basic knowledge Python</span>
+                    </li>
+                     <li class="ElementTechSkill">
+                         <span class="ElementTechSkillText">Understanding Agile</span>
+                    </li>
+                     <li class="ElementTechSkill">
+                         <span class="ElementTechSkillText">Understanding SDLC</span>
+                    </li>
+            </ul>
+            </div>
+            <!--Soft Skills-->
+            <div class="SoftSkills">
+                <h3 class="SoftSkillsTitle">Soft Skills</h3>
+                <ul>
+                    <li class="ElementSoftSkill">
+                        <span class="ElementSoftSkillText">Basic knowledge ChromeDevTools</span>
+                    </li>                   
+                    <li class="ElementSoftSkill">
+                        <span class="ElementSoftSkillText">Basic knowledge Postman</span>
+                    </li>
+                    <li class="ElementSoftSkill">
+                        <span class="ElementSoftSkillText">Jira</span>
+                    </li>
+                    <li class="ElementSoftSkill">
+                        <span class="ElementSoftSkillText">Mantis</span>
+                    </li>                                     
+            </div>
+        </aside>
 
-{% for post in site.posts reversed %}
-	{% include slide.html %}
-	<div class="page-break"></div>
-{% endfor %}
-{% unless site.simple-slideshow %}
-{% if site.overview %}
-<section id="overview" class="step" {% for attr in site.overview-data %} data-{{attr[0]}}="{{attr[1]}}"{% endfor %}></section>
-{% endif %}
-{% endunless %}
+        <!--About Me-->
+        <div class="AboutMeContainer">
+            <!--About me main info-->
+            <div class="AboutMe">
+                <h2 class="Profession">QA Engineer</h2>
+                <h1 class="myName">Yevgen Khainskyi</h1>
+                 <p class="Description">Getting a position of software tester with ability to develop and improve my skills for becoming a professional in software testing.</p> 
+            </div>
+            <!--Projects container-->     
+            
+            <!--<div class="Projects">
+                <h3 class="aboutMeTitles">Projects</h3>
+                <ol>
+                    <li class="projectsNum"> 
+                        <a class="projectLinks" href="https://lovecamp.goit.ua/">ttps://lovecamp.goit.ua/</a> 
+                        <span class="dots">......................</span>
+                        <span>[ <span class="techName">HTML5, CSS3 </span> ]</span>
+                    </li>
+                    <li class="projectsNum"> 
+                        <a class="projectLinks" href="https://cryptohub.goit.ua/">https://cryptohub.goit.ua/</a>
+                        <span class="dots">...................</span>
+                        <span>[ <span class="techName"> JavaScript </span> ]</span>                        
+                    </li>
+                    <li class="projectsNum">
+                         <a class="projectLinks" href="https://kidslike.goit.co.ua/">https://kidslike.goit.co.ua/</a>
+                         <span class="dots">...................</span>
+                         <span>[ <span class="techName"> React.js, Node.js </span> ]</span>                         
+                    </li>                     
+
+
+                </ol>
+            </div>      
+
+            <!-Work Exp-->
+          <!--<div class="WorkExpContainer">
+            <div class="WorkExp1">               
+                     <h3 class="aboutMeTitles">Work Expirience</h3>                               
+                     <h4 class="Position">Front-End Developer <span class="ExpPositionSpec">Freelance</span></h4>
+                      <span class="ExpTime">
+                          September 2019 - up to now  I Ukraine
+                      </span>
+                      <ul class="ProfessionDuties">            
+                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                         <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                         <li> Risus commodo viverra maecenas.</li>
+                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>                    
+                      </ul>
+            </div>  
+                           
+            <div class="WorkExp2">               
+                 <h4 class="Position">Manager <span class="ExpPositionSpec"> Roga & Kopyta New</span></h4>
+                 <span class="ExpTime">
+                     March 2015 - October 2018
+                 </span>
+                    <ul class="ProfessionDuties">            
+                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua.</li>
+                         <li> Quis ipsum suspendisse ultrices gravida.</li>
+                         <li> Risus commodo viverra maecenas.</li>                                       
+                    </ul>
+            </div>
+            <div class="WorkExp3">              
+                <h4 class="Position">Manager <span class="ExpPositionSpec"> Roga & Kopyta LLC</span></h4>
+                <span class="ExpTime">June 2014 - February 2015</span>
+                   <ul class="ProfessionDuties">            
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Quis ipsum suspendisse ultrices gravida.</li>
+                        <li>Risus commodo viverra maecenas.</li>                                       
+                   </ul>
+           </div>-->
+            <div class="Education"> 
+               <h3 class="aboutMeTitles">Education</h3>
+               <p class="UniversityName">Kharkiv Engineering University</p>
+               <p class="UniversityProf">Programming Engineering</p>
+               <p class="UniversityDate">Septermber 2009 - June 2014 <span class="EducDateSpec">I</span>  Ukraine</p>                 
+               
+           </div>    
+        </div>  
+    </div>   
+</body>
+</html>
